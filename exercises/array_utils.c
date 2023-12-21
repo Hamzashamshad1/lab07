@@ -94,7 +94,7 @@ int getIndexOfMin(const int *arr, int size) {
             index++;
         }
     }
-    return ;
+    return index ;
 }
 
 int getMax(const int *arr, int size) {
@@ -109,7 +109,15 @@ int getMax(const int *arr, int size) {
 }
 
 int getIndexOfMax(const int *arr, int size) {
-  //TODO: implement
+   int max = arr[0];
+  int index=0;
+   for (int i = 1; i < size; i++) {
+        if (arr[i] >max) {
+            max = arr[i];
+            index++;
+        }
+    }
+    return index;
 }
 
 int * filterThreshold(const int *arr, int size, int threshold, int *resultSize) {
