@@ -75,11 +75,26 @@ double getMean(const int *arr, int size) {
 
 
 int getMin(const int *arr, int size) {
-  //TODO: implement
+  int min = arr[0];
+
+    for (int i = 1; i < size; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
 }
 
 int getIndexOfMin(const int *arr, int size) {
-  //TODO: implement
+  int min = arr[0];
+  int index=0;
+   for (int i = 1; i < size; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+            index++;
+        }
+    }
+    return index;
 }
 
 int getMax(const int *arr, int size) {
