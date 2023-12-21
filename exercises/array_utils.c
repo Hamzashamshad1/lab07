@@ -61,8 +61,18 @@ void freeTable(int **table, int n) {
 }
 
 double getMean(const int *arr, int size) {
-  //TODO: implement
+  int sum = 0;
+
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+
+    // Calculate the mean
+    double mean = (double)sum / size;
+
+    return mean;
 }
+
 
 int getMin(const int *arr, int size) {
   //TODO: implement
